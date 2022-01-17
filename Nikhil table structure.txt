@@ -28,6 +28,8 @@ code varchar2(25),
 quantity number(25)
 )
 
+OrderItem:
+
 create table OrderItem(
 id INT primary key,
 productId number(25),
@@ -35,11 +37,15 @@ quantity number(25),
 price number(25)
 )
 
+Transaction:
+
 create table transaction(
 transactionId number(25),
 orderId number(25),
 orderItemId INT REFERENCES OrderItem(id)
 )
+
+order:
 
 
 create table orders(
