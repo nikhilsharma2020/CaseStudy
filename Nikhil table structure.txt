@@ -1,0 +1,61 @@
+//CREATED BY NIKHIL
+
+users:
+
+create table users(
+firstname varchar2(25),
+lastname varchar2(25),
+mobile number(11),
+gender varchar2(150),
+username varchar2(25),
+password varchar2(25)
+)
+
+product:
+
+create table Product(
+id number(15) primary key,
+code varchar2(25),
+name varchar2(25),
+description varchar2(150),
+price number(25)
+)
+
+inventory:
+
+create table inventory(
+code varchar2(25),
+quantity number(25)
+)
+
+create table OrderItem(
+id INT primary key,
+productId number(25),
+quantity number(25),
+price number(25)
+)
+
+create table transaction(
+transactionId number(25),
+orderId number(25),
+orderItemId INT REFERENCES OrderItem(id)
+)
+
+
+create table orders(
+id number(25),
+customerEmail varchar2(25),
+customerAddress varchar2(25),
+orderItemId INT REFERENCES OrderItem(id)
+)
+
+
+bill:
+
+create table bill(
+username varchar2(25),
+gst number(15),
+shipping number(15),
+total number(30)
+)
+
