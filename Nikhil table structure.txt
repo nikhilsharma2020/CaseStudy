@@ -41,7 +41,7 @@ Transaction:
 
 create table transaction(
 transactionId number(25),
-orderId number(25),
+orderId INT REFERENCES order(id) number(25),
 orderItemId INT REFERENCES OrderItem(id)
 )
 
