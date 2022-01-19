@@ -34,6 +34,12 @@ function deleteAll() {
 }
 </script>
 </head>
+<style>
+body{
+background-image: url("9c44586e92284ae7903d.jpg");
+background-size: 100%;
+}
+</style>
 <body>
 	<%@ include file="header.jsp" %>
 	<br>
